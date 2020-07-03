@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./sass/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/187c7953cf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./sass/jackpot.css">
+    <script src='index.js'></script>
+    <title>Mega Millon - Home</title>
+</head>
+<body>
+    <section class="container">
+        <section class="nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="#"><i class="fas fa-info"></i></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i></a></li>
+            </ul>
+        </section>
+
+        <!-- SORTEO -->
+
+        <div class="sor-1">
+            <div class="bolillero-1">
+                <div class="bolillero">
+                    <div class="tubo"></div>
+                    <div class="lens" id="lens"></div>
+                    <div class="bolillas-content">
+                            <div class="balls" id="balls">
+                            <label></label>
+                            <label></label>
+                            <label></label>
+                            <label></label>
+                            <label></label>
+                            <label></label>
+                            </div>
+                    </div>
+                    <div class="base"></div>
+                </div>
+            </div>
+            <form class="form-sor">
+                <p>
+                    Ingresa 5 números, del 0 al 99. 
+                </p>
+                <div>
+                    <input type='text' id='jug_1'>
+                    <input type='text' id='jug_2'>
+                    <input type='text' id='jug_3'>
+                    <input type='text' id='jug_4'>
+                    <input type='text' id='jug_5'>
+                </div>
+                <input type='button' class="btn" value='Sortear' onclick='iniSorteo()'>
+            </form>
+            <div class="resultado-1" id="resultado-1">
+                <table>
+                    <tr>
+                        <th colspan='5'>
+                            NUMEROS GANADORES
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Pos.1</td>
+                        <td>Pos.2</td>
+                        <td>Pos.3</td>
+                        <td>Pos.4</td>
+                        <td>Pos.5</td>
+                    </tr>
+                    <tr>
+                        <td id='num_1' class="num1"></td>
+                        <td id='num_2' class="num1"></td>
+                        <td id='num_3' class="num1"></td>
+                        <td id='num_4' class="num1"></td>
+                        <td id='num_5' class="num1"></td>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <th colspan='5'>
+                            NUMEROS ACERTADOS
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Pos.1</td>
+                        <td>Pos.2</td>
+                        <td>Pos.3</td>
+                        <td>Pos.4</td>
+                        <td>Pos.5</td>
+                    </tr>
+                    <tr>
+                        <td id='acert_1' class="num2"></td>
+                        <td id='acert_2' class="num2"></td>
+                        <td id='acert_3' class="num2"></td>
+                        <td id='acert_4' class="num2"></td>
+                        <td id='acert_5' class="num2"></td>
+                    </tr>
+                </table>
+                    <div>
+                        <h3 id="resultado"></h3>
+                    </div>
+                    <button class="btn" onclick="btnBack()">Volver</button>
+            </div>
+        </div>
+
+        <!-- MEGA MILLON -->
+        <div class="sor-2">
+            <div class="bolillero-2">
+                <div class="bolillero">
+                    <div class="tubo"></div>
+                    <div class="lens" id="lens-mega"></div>
+                    <div class="bolillas-content">
+                            <div class="balls" id="balls-power">
+                               <label></label>
+                               <label></label>
+                               <label></label>
+                               <label></label>
+                               <label></label>
+                               <label></label>
+                            </div>
+                    </div>
+                    <div class="base"></div>
+            </div>
+            </div>
+            <form class="form-sor">
+                <p>
+                    Ingresa el número para participar del MEGA MILLON! 
+                </p>
+                <div>
+                    <input type='text' id='mega_1'>
+                </div>
+                <input type='button' class="btn" value='Mega Millon' onclick='iniMega()'>
+            </form>
+            <div class="resultado-2" id="resultado-2">
+                        <label>
+                            NUMERO GANADOR
+                        </label>
+                        <div class="sor-1">
+                            <label>Pos.1</label>
+                            <label id='meg_1' class="num1"></label>
+                        </div>
+                <hr>
+                        <label>
+                            NUMEROS ACERTADOS
+                        </label>
+                        <div class="sor-1">
+                            <label>Pos.1</label>
+                            <label id='acertmega_1' class="num2"></label>
+                        </div>
+                    <div class="sor-1">
+                        <h3 id="resultado-mega"></h3>
+                    </div>
+                    <button class="btn" onclick="btnBackMega()">Volver</button>
+            </div>
+        </div>
+
+        <div></div>
+
+        <!-- JACKPOT -->
+<div class="content-jackpot" id="content-jack">
+    <div class="absolute"></div>
+    <div class="jc-part">
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+        <div class="part"></div>
+    </div>
+    <div class="jc-backball">
+        <label id="jack"></label>
+    </div>
+    <div class="jc-lensball"></div>
+    <div class="jc-rectangle">
+        <label>JACKPOT</label>
+    </div>
+    <div class="money">
+        <label>$</label>
+        <label>$</label>
+        <label>$</label>
+    </div>
+</div>
+
+    </section>
+</body>
+</html>
